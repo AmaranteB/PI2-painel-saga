@@ -10,6 +10,14 @@ const fs = require('fs');
 const DB_PATH = path.resolve(process.env.DB_PATH || path.join(__dirname, 'data', 'saga.db'));
 fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
 
+// Em hospedagem, inicializa o disco persistente com o banco versionado na primeira execução.
+// Depois disso, o banco persistente tem prioridade e não é sobrescrito em novos deploys.
+const bancoInicial = path.join(__dirname, 'data', 'saga.db');
+if (!fs.existsSync(DB_PATH) && fs.existsSync(bancoInicial)) {
+  fs.copyFileSync(bancoInicial, DB_PATH);
+  console.log('Banco inicial copiado para:', DB_PATH);
+}
+
 // Abre (ou cria) o arquivo SQLite.
 const db = new sqlite3.Database(DB_PATH, (erro) => {
   if (erro) {

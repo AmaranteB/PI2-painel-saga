@@ -38,3 +38,4 @@ SAGA/
 ```
 
 O banco `data/saga.db` é versionado para que o painel já tenha dados ao clonar o projeto. O arquivo local de sessões não é versionado.
+

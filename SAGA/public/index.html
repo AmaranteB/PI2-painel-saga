@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAGA - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-page">
+
+  <!--    Tela de login do sistema.  -->
+      
+  <main class="login-wrapper">
+    <section class="login-brand">
+      <span class="brand-badge">SAGA</span>
+      <h1>SAGA – Sistema de Acompanhamento Gestão e Análise de Inadimplência</h1>
+      <p>Projeto Integrador para estudo de gestão e análise de inadimplência.</p>
+    </section>
+
+    <section class="login-card">
+      <h2>Acesso ao sistema</h2>
+      <p class="muted">Informe suas credenciais para continuar.</p>
+
+      <form id="loginForm">
+        <label for="usuario">Usuário</label>
+        <input id="usuario" name="usuario" type="text" autocomplete="username" required />
+
+        <label for="senha">Senha</label>
+        <div class="password-field">
+          <input id="senha" name="senha" type="password" autocomplete="current-password" required />
+          <button id="togglePassword" class="password-toggle" type="button" aria-label="Mostrar senha" aria-pressed="false" title="Mostrar senha">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" />
+              <circle cx="12" cy="12" r="3" />
+              <path class="eye-slash" d="M3 3 21 21" />
+            </svg>
+          </button>
+        </div>
+
+        <button type="submit" class="primary-button">Entrar</button>
+        <p id="loginMessage" class="form-message" aria-live="polite"></p>
+      </form>
+
+      
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

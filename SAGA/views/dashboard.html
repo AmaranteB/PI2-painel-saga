@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAGA - Painel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dashboard-page">
+  <div class="app-shell">
+    <!-- ========================================================
+         Menu lateral retrátil.
+         ======================================================== -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div>
+          <span class="sidebar-logo">SAGA</span>
+          <h2 class="sidebar-title">Tópicos</h2>
+        </div>
+        <button id="toggleSidebar" class="icon-button" type="button" aria-label="Recolher menu" aria-expanded="true" title="Recolher menu">☰</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-view="negocio">
+          <span class="nav-icon">▦</span>
+          <span class="nav-label">Negócio</span>
+        </button>
+        <button class="nav-item" data-view="risco">
+          <span class="nav-icon">⚠</span>
+          <span class="nav-label">Risco</span>
+        </button>
+        <button class="nav-item" data-view="cobranca">
+          <span class="nav-icon">$</span>
+          <span class="nav-label">Cobrança</span>
+        </button>
+        <button class="nav-item" data-view="analise">
+          <span class="nav-icon">▥</span>
+          <span class="nav-label">Análise</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="logoutButton" class="nav-item logout-item">
+          <span class="nav-icon">↪</span>
+          <span class="nav-label">Sair</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ========================================================
+         Área central. O JavaScript substitui o conteúdo conforme
+         o tópico selecionado no menu.
+         ======================================================== -->
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SAGA</p>
+          <h1 id="pageTitle">Visão do Negócio</h1>
+        </div>
+
+        <div class="topbar-actions">
+          <label for="negocioSelect">Negócio</label>
+          <select id="negocioSelect"></select>
+          <div id="userChip" class="user-chip">Admin</div>
+        </div>
+      </header>
+
+      <section id="contentArea" class="content-area">
+        <!-- Conteúdo carregado dinamicamente. -->
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

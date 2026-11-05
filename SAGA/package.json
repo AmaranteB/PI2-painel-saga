@@ -1,0 +1,22 @@
+{
+  "name": "saga-inadimplencia",
+  "version": "1.0.0",
+  "description": "SAGA - Sistema de Acompanhamento Gestão e Análise de Inadimplência",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "dev": "node --env-file-if-exists=.env ./node_modules/nodemon/bin/nodemon.js server.js"
+  },
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "dependencies": {
+    "connect-sqlite3": "^0.9.18",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

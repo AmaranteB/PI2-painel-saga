@@ -1,6 +1,6 @@
 # SAGA
 
-Sistema de acompanhamento, gestão e análise de inadimplência. Projeto de estudo desenvolvido com Node.js, Express, SQLite, HTML, CSS e JavaScript.
+Sistema de acompanhamento, gestão e análise de adimplência. Projeto de estudo desenvolvido com Node.js, Express, SQLite, HTML, CSS e JavaScript.
 
 ## Executar localmente
 
